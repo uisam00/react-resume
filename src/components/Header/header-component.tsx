@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = React.memo(({ toggleTheme }) => {
 
     return (
         <Container>
-            curriculo
+            Page
             <Switch
                 onChange={toggleTheme}
                 checked={title === 'dark'}
