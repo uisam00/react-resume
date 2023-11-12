@@ -31,6 +31,9 @@ module.exports = {
         },
     },
     rules: {
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        'jsx-a11y/control-has-associated-label': 'off',
         'react/function-component-definition': 'off',
         'react/jsx-props-no-spreading': 'off',
         'no-param-reassign': 'off',
