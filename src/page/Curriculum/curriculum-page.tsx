@@ -2,6 +2,7 @@ import React from 'react';
 
 import { FixedContainer } from '../../components/FixedContainer';
 import { SocialIconLink } from '../../components/SocialIconLink';
+import { EducationStatus } from '../../enums/education.enum';
 import { AboutSection } from './components/AboutSection';
 import { AwardsSection } from './components/Awards';
 import { EducationSection } from './components/EducationSection';
@@ -28,7 +29,41 @@ const CurriculumPage: React.FC = React.memo(() => {
                 <hr className='m-0' />
                 <ExperienceSection />
                 <hr className='m-0' />
-                <EducationSection />
+                <EducationSection
+                    educationItems={[
+                        {
+                            course: 'Técnico em Informática para Internet',
+                            institution: 'Escola Estadual Salomé de Melo Rocha',
+                            city: 'Guia Lopes da Laguna - MS',
+                            period: {
+                                start: '2016',
+                                end: '2017',
+                                status: EducationStatus.Completed,
+                            },
+                        },
+                        {
+                            course: 'Bacharelado em Engenharia de Software',
+                            institution:
+                                'Universidade Federal do Mato Grosso do Sul',
+                            city: 'Campo Grande - MS',
+                            period: {
+                                start: '2019',
+                                end: '2022',
+                                status: EducationStatus.Discontinued,
+                            },
+                        },
+                        {
+                            course: 'Ciência da Computação',
+                            institution: 'Universidade Estácio de Sá',
+                            city: 'Pouso Alegre - MG',
+                            period: {
+                                start: '2023',
+
+                                status: EducationStatus.InProgress,
+                            },
+                        },
+                    ]}
+                />
                 <hr className='m-0' />
                 <SkillsSection />
                 <hr className='m-0' />
