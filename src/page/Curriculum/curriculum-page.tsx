@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FixedContainer } from '../../components/FixedContainer';
 import { SocialIconLink } from '../../components/SocialIconLink';
-import { AWARDS, EDUCATION_ITEMS } from '../../mocks';
+import { AWARDS, EDUCATION_ITEMS, EXPERIENCES } from '../../mocks';
 import { AboutSection } from './components/AboutSection';
 import { AwardsSection } from './components/AwardsSection';
 import { EducationSection } from './components/EducationSection';
@@ -27,7 +27,7 @@ const CurriculumPage: React.FC = React.memo(() => {
             <div className='container-fluid p-0'>
                 <AboutSection />
                 <hr className='m-0' />
-                <ExperienceSection />
+                <ExperienceSection experiences={EXPERIENCES} />
                 <hr className='m-0' />
                 <EducationSection educationItems={EDUCATION_ITEMS} />
                 <hr className='m-0' />
