@@ -2,9 +2,9 @@ import React from 'react';
 
 import { FixedContainer } from '../../components/FixedContainer';
 import { SocialIconLink } from '../../components/SocialIconLink';
-import { EducationStatus } from '../../enums/education.enum';
+import { AWARDS, EDUCATION_ITEMS } from '../../mocks';
 import { AboutSection } from './components/AboutSection';
-import { AwardsSection } from './components/Awards';
+import { AwardsSection } from './components/AwardsSection';
 import { EducationSection } from './components/EducationSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { InterestsSection } from './components/InterestsSection';
@@ -29,47 +29,13 @@ const CurriculumPage: React.FC = React.memo(() => {
                 <hr className='m-0' />
                 <ExperienceSection />
                 <hr className='m-0' />
-                <EducationSection
-                    educationItems={[
-                        {
-                            course: 'Técnico em Informática para Internet',
-                            institution: 'Escola Estadual Salomé de Melo Rocha',
-                            city: 'Guia Lopes da Laguna - MS',
-                            period: {
-                                start: '2016',
-                                end: '2017',
-                                status: EducationStatus.Completed,
-                            },
-                        },
-                        {
-                            course: 'Bacharelado em Engenharia de Software',
-                            institution:
-                                'Universidade Federal do Mato Grosso do Sul',
-                            city: 'Campo Grande - MS',
-                            period: {
-                                start: '2019',
-                                end: '2022',
-                                status: EducationStatus.Discontinued,
-                            },
-                        },
-                        {
-                            course: 'Ciência da Computação',
-                            institution: 'Universidade Estácio de Sá',
-                            city: 'Pouso Alegre - MG',
-                            period: {
-                                start: '2023',
-
-                                status: EducationStatus.InProgress,
-                            },
-                        },
-                    ]}
-                />
+                <EducationSection educationItems={EDUCATION_ITEMS} />
                 <hr className='m-0' />
                 <SkillsSection />
                 <hr className='m-0' />
                 <InterestsSection />
                 <hr className='m-0' />
-                <AwardsSection />
+                <AwardsSection awards={AWARDS} />
             </div>
         </S.Container>
     );
