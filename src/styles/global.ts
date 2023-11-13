@@ -83,6 +83,42 @@ export default createGlobalStyle`
     background-color: #fff;
   }
 
+
+  // used
+
+  .subheading {
+    font-family:
+      'Saira Extra Condensed',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      'Helvetica Neue',
+      Arial,
+      sans-serif,
+      'Apple Color Emoji',
+      'Segoe UI Emoji',
+      'Segoe UI Symbol',
+      'Noto Color Emoji';
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .text-white {
+    color: #fff !important;
+  }
+
+  .text-primary {
+    color: ${({ theme }) => theme.colors.primary} !important;
+  }
+
+  .text-secondary {
+    color: ${({ theme }) => theme.colors.secondary} !important;
+  }
+
+  // ----------------- //
+
   [tabindex='-1']:focus:not(:focus-visible) {
     outline: 0 !important;
   }
@@ -2285,7 +2321,7 @@ export default createGlobalStyle`
     width: 100%;
     margin-top: 0.25rem;
     font-size: 80%;
-    color: #28a745;
+    color: ${({ theme }) => theme.colors.primary};
   }
 
   .valid-tooltip {
@@ -2313,7 +2349,7 @@ export default createGlobalStyle`
 
   .was-validated .form-control:valid,
   .form-control.is-valid {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
     padding-right: calc(1.5em + 0.75rem);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -2322,7 +2358,7 @@ export default createGlobalStyle`
   }
   .was-validated .form-control:valid:focus,
   .form-control.is-valid:focus {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
   }
 
@@ -2334,7 +2370,7 @@ export default createGlobalStyle`
 
   .was-validated .custom-select:valid,
   .custom-select.is-valid {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
     padding-right: calc(0.75em + 2.3125rem);
     background:
       url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
@@ -2344,13 +2380,13 @@ export default createGlobalStyle`
   }
   .was-validated .custom-select:valid:focus,
   .custom-select.is-valid:focus {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
   }
 
   .was-validated .form-check-input:valid ~ .form-check-label,
   .form-check-input.is-valid ~ .form-check-label {
-    color: #28a745;
+    color: ${({ theme }) => theme.colors.primary};
   }
   .was-validated .form-check-input:valid ~ .valid-feedback,
   .was-validated .form-check-input:valid ~ .valid-tooltip,
@@ -2361,11 +2397,11 @@ export default createGlobalStyle`
 
   .was-validated .custom-control-input:valid ~ .custom-control-label,
   .custom-control-input.is-valid ~ .custom-control-label {
-    color: #28a745;
+    color: ${({ theme }) => theme.colors.primary};
   }
   .was-validated .custom-control-input:valid ~ .custom-control-label::before,
   .custom-control-input.is-valid ~ .custom-control-label::before {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   .was-validated .custom-control-input:valid:checked ~ .custom-control-label::before,
   .custom-control-input.is-valid:checked ~ .custom-control-label::before {
@@ -2378,16 +2414,16 @@ export default createGlobalStyle`
   }
   .was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before,
   .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
   }
 
   .was-validated .custom-file-input:valid ~ .custom-file-label,
   .custom-file-input.is-valid ~ .custom-file-label {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   .was-validated .custom-file-input:valid:focus ~ .custom-file-label,
   .custom-file-input.is-valid:focus ~ .custom-file-label {
-    border-color: #28a745;
+    border-color: ${({ theme }) => theme.colors.primary};
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
   }
 
@@ -2681,8 +2717,8 @@ export default createGlobalStyle`
 
   .btn-success {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   .btn-success:hover {
     color: #fff;
@@ -2699,8 +2735,8 @@ export default createGlobalStyle`
   .btn-success.disabled,
   .btn-success:disabled {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   .btn-success:not(:disabled):not(.disabled):active,
   .btn-success:not(:disabled):not(.disabled).active,
@@ -2958,13 +2994,13 @@ export default createGlobalStyle`
   }
 
   .btn-outline-success {
-    color: #28a745;
-    border-color: #28a745;
+    color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   .btn-outline-success:hover {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   .btn-outline-success:focus,
   .btn-outline-success.focus {
@@ -2972,15 +3008,15 @@ export default createGlobalStyle`
   }
   .btn-outline-success.disabled,
   .btn-outline-success:disabled {
-    color: #28a745;
+    color: ${({ theme }) => theme.colors.primary};
     background-color: transparent;
   }
   .btn-outline-success:not(:disabled):not(.disabled):active,
   .btn-outline-success:not(:disabled):not(.disabled).active,
   .show > .btn-outline-success.dropdown-toggle {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   .btn-outline-success:not(:disabled):not(.disabled):active:focus,
   .btn-outline-success:not(:disabled):not(.disabled).active:focus,
@@ -5048,7 +5084,7 @@ export default createGlobalStyle`
 
   .badge-success {
     color: #fff;
-    background-color: #28a745;
+    background-color: ${({ theme }) => theme.colors.primary};
   }
   a.badge-success:hover,
   a.badge-success:focus {
@@ -6523,7 +6559,7 @@ export default createGlobalStyle`
   }
 
   .bg-success {
-    background-color: #28a745 !important;
+    background-color: ${({ theme }) => theme.colors.primary} !important;
   }
 
   a.bg-success:hover,
@@ -6645,7 +6681,7 @@ export default createGlobalStyle`
   }
 
   .border-success {
-    border-color: #28a745 !important;
+    border-color: ${({ theme }) => theme.colors.primary} !important;
   }
 
   .border-info {
@@ -10207,22 +10243,14 @@ export default createGlobalStyle`
     font-style: italic !important;
   }
 
-  .text-white {
-    color: #fff !important;
-  }
 
-  .text-primary {
-    color: #51bd1f !important;
-  }
 
   a.text-primary:hover,
   a.text-primary:focus {
     color: #824027 !important;
   }
 
-  .text-secondary {
-    color: #6c757d !important;
-  }
+
 
   a.text-secondary:hover,
   a.text-secondary:focus {
@@ -10230,7 +10258,7 @@ export default createGlobalStyle`
   }
 
   .text-success {
-    color: #28a745 !important;
+    color: ${({ theme }) => theme.colors.primary} !important;
   }
 
   a.text-success:hover,
@@ -10451,24 +10479,7 @@ export default createGlobalStyle`
     font-weight: 400;
   }
 
-  .subheading {
-    font-family:
-      'Saira Extra Condensed',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      sans-serif,
-      'Apple Color Emoji',
-      'Segoe UI Emoji',
-      'Segoe UI Symbol',
-      'Noto Color Emoji';
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
+
 
   #sideNav .navbar-nav .nav-item .nav-link {
     font-weight: 800;
