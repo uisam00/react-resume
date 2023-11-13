@@ -4,7 +4,7 @@ import React from 'react';
 
 import { IconProps } from '.';
 
-const Icon: React.FC<IconProps> = ({ iconName, iconType = 'fas' }) => {
+const Icon: React.FC<IconProps> = ({ iconName, iconType = 'fas', ...rest }) => {
     const iconDefinition = findIconDefinition({ prefix: iconType, iconName });
 
     if (!iconDefinition) {
@@ -14,7 +14,7 @@ const Icon: React.FC<IconProps> = ({ iconName, iconType = 'fas' }) => {
         return null;
     }
 
-    return <FontAwesomeIcon icon={iconDefinition} />;
+    return <FontAwesomeIcon {...rest} icon={iconDefinition} />;
 };
 
 export default Icon;
