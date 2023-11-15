@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from 'react';
 
 import { SvgByUrlProps } from '.';
 import { useGetHtmlByUrlQuery } from '../../hooks/queries/GET/useGetHtmlByUrlQuery';
-import * as S from './svg-by-url.component styles';
+import * as S from './html-by-url.component styles';
 
-const SvgByUrl: React.FC<SvgByUrlProps> = ({
+const HtmlByUrl: React.FC<SvgByUrlProps> = ({
     src,
     classToChildren,
     ...divProps
@@ -36,4 +36,4 @@ const SvgByUrl: React.FC<SvgByUrlProps> = ({
     );
 };
 
-export default SvgByUrl;
+export default HtmlByUrl;
