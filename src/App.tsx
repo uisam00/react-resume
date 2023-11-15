@@ -1,9 +1,11 @@
 // import { Header } from './components/Header';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { useCallback } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import usePersistedState from './hooks/usePersistedState';
 import { CurriculumPage } from './page/Curriculum';
+import { queryClient } from './services/queryClient';
 import GlobalStyle from './styles/global';
 import dark from './styles/themes/dark';
 import light from './styles/themes/light';
@@ -17,11 +19,13 @@ const App = () => {
     }, [chooseTheme.title, setChooseTheme]);
 
     return (
-        <ThemeProvider theme={chooseTheme}>
-            <GlobalStyle />
-            {/* <Header toggleTheme={toggleTheme} /> */}
-            <CurriculumPage />
-        </ThemeProvider>
+        <QueryClientProvider client={queryClient}>
+            <ThemeProvider theme={chooseTheme}>
+                <GlobalStyle />
+                {/* <Header toggleTheme={toggleTheme} /> */}
+                <CurriculumPage />
+            </ThemeProvider>
+        </QueryClientProvider>
     );
 };
 
