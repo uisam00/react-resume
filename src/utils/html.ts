@@ -17,7 +17,6 @@ export function replaceNonMatchingAttributes(inputString, newColor) {
     function replace(match) {
         const matchResult = match?.match(/#(?:[0-9a-fA-F]{3}){1,2}/);
         const originalColor = matchResult && matchResult[0];
-        console.log(originalColor);
 
         // Replace only if the original color is not in the list of ignored colors
         if (!ignoredColors.has(originalColor?.toLowerCase())) {

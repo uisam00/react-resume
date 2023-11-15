@@ -1,4 +1,4 @@
-export function removeXmlHeader(svgString) {
+export function removeXmlHeader(svgString: string) {
     if (!svgString || typeof svgString !== 'string') return;
 
     const svgWithoutXml = svgString.replace(/<\?xml.*?\?>/, '');
