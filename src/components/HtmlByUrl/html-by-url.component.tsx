@@ -7,6 +7,7 @@ import * as S from './html-by-url.component styles';
 const HtmlByUrl: React.FC<SvgByUrlProps> = ({
     src,
     classToChildren,
+    handleHtmlString,
     ...divProps
 }) => {
     const { html, isFetchedHtml } = useGetHtmlByUrlQuery({
@@ -15,8 +16,15 @@ const HtmlByUrl: React.FC<SvgByUrlProps> = ({
 
     const containerRef = useRef(null);
 
+    const handledHtml = (htmlString: string) => {
+        if (!htmlString || typeof htmlString !== 'string') return '';
+
+        return handleHtmlString ? handleHtmlString(html) : html;
+    };
+
     useEffect(() => {
-        if (!classToChildren || typeof classToChildren !== 'string') return;
+        if (!html || !classToChildren || typeof classToChildren !== 'string')
+            return;
         // Adiciona a classe ao primeiro filho do container após a renderização
         if (containerRef.current) {
             const { firstChild } = containerRef.current;
@@ -31,7 +39,9 @@ const HtmlByUrl: React.FC<SvgByUrlProps> = ({
         <S.DivForHTML
             {...divProps}
             ref={containerRef}
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{
+                __html: handledHtml(html),
+            }}
         />
     );
 };
