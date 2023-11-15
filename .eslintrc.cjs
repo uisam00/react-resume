@@ -95,6 +95,7 @@ module.exports = {
                 code: 120,
             },
         ],
+        'consistent-return': 'off',
         'react/react-in-jsx-scope': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
