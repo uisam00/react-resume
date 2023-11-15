@@ -5,3 +5,6 @@ dist
 coverage
 .husky
 docs
+
+.env.development
+.env

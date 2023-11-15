@@ -6,3 +6,6 @@ coverage
 .husky
 docs
 fontawesome-svg-core-fork
+
+.env.development
+.env
