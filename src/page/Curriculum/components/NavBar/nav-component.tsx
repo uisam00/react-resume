@@ -11,7 +11,7 @@ const NavBar: React.FC<NavBarProps> = (props) => {
                 <span className='d-none d-lg-block'>
                     <img
                         className='img-fluid img-profile rounded-circle mx-auto mb-2'
-                        src='../../../../../public/profile.jpeg'
+                        src='/profile.jpeg'
                         alt='Foto de Ui Sam dos Santos no Museu do Ipiranga'
                     />
                 </span>
