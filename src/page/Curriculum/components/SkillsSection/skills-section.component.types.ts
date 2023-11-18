@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface SkillSectionProps {
     skillsGroup: SkillGroup[];
 }
@@ -9,5 +11,5 @@ interface SkillGroup {
 
 interface Skill {
     name: string;
-    iconUrl: string;
+    icon: ReactNode | ReactNode[];
 }

@@ -4,6 +4,7 @@ import { ThemeContext } from 'styled-components';
 import { SkillSectionProps } from '.';
 import { HtmlByUrl } from '../../../../components/HtmlByUrl';
 import { Icon } from '../../../../components/Icon';
+import { PowerfulContainer } from '../../../../components/PowerfulContainer';
 import { replaceNonMatchingAttributes } from '../../../../utils/html';
 import { Section } from '../Section';
 import * as S from './skills-section.styles';
@@ -22,24 +23,30 @@ const SkillsSection: React.FC<SkillSectionProps> = ({ skillsGroup }) => {
                     <ul data-aos='fade-left' className='list-inline dev-icons'>
                         {group.skills.map(
                             (skill, index) =>
-                                !!skill.iconUrl && (
+                                !!skill.icon &&
+                                (Array.isArray(skill.icon) ? (
+                                    skill.icon.map((i, indexJ) => (
+                                        <S.ListIconItem
+                                            key={`skill-icon-${index}-${indexJ}`}
+                                            className='list-inline-item'
+                                            iconColor={iconColor}
+                                        >
+                                            <PowerfulContainer classToChildren='svg-inline--fa fa-node-js fa-w-14'>
+                                                {i}
+                                            </PowerfulContainer>
+                                        </S.ListIconItem>
+                                    ))
+                                ) : (
                                     <S.ListIconItem
                                         key={`skill-icon-${index}`}
                                         className='list-inline-item'
                                         iconColor={iconColor}
                                     >
-                                        <HtmlByUrl
-                                            classToChildren='svg-inline--fa fa-node-js fa-w-14'
-                                            src={skill.iconUrl}
-                                            handleHtmlString={(html) => {
-                                                return replaceNonMatchingAttributes(
-                                                    html,
-                                                    iconColor,
-                                                );
-                                            }}
-                                        />
+                                        <PowerfulContainer classToChildren='svg-inline--fa fa-node-js fa-w-14'>
+                                            {skill.icon}
+                                        </PowerfulContainer>
                                     </S.ListIconItem>
-                                ),
+                                )),
                         )}
                     </ul>
                     <ul data-aos='fade-left' className='fa-ul mb-5'>
