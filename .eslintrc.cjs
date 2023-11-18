@@ -96,6 +96,7 @@ module.exports = {
             },
         ],
         'consistent-return': 'off',
+        'jsx-a11y/anchor-is-valid': 'off',
         'react/react-in-jsx-scope': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',

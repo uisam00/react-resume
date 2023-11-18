@@ -86,6 +86,15 @@ export default createGlobalStyle`
 
   // used
 
+  a:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+  }
+  a:not([href]):not([class]):hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .subheading {
     font-family:
       'Saira Extra Condensed',
@@ -223,14 +232,6 @@ export default createGlobalStyle`
     text-decoration: underline;
   }
 
-  a:not([href]):not([class]) {
-    color: inherit;
-    text-decoration: none;
-  }
-  a:not([href]):not([class]):hover {
-    color: inherit;
-    text-decoration: none;
-  }
 
   pre,
   code,
