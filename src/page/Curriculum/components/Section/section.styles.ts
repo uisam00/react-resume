@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
 export const SectionContainer = styled.section`
+
+  @media print {
+    page-break-before: always;
+  }
+
   display: flex;
-  align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 5rem;

@@ -12,15 +12,25 @@ import { NavBar } from './components/NavBar';
 import { SkillsSection } from './components/SkillsSection';
 import * as S from './curriculum-styles';
 
+const ENVIRONMENT_URL = import.meta.env.VITE_ENVIRONMENT_URL;
+
 const CurriculumPage: React.FC = React.memo(() => {
     return (
         <S.Container id='page-top'>
-            <FixedContainer position='bottomRight' className='text-right p-2'>
+            <S.FixedLinksContainer
+                position='bottomRight'
+                className='text-right p-2'
+            >
+                <S.UrlLink href={ENVIRONMENT_URL}>
+                    Acesse esse currículo na Web
+                </S.UrlLink>
+
                 <SocialIconLink
+                    href='https://api.whatsapp.com/send?phone=67998933115'
                     fSize='300%'
                     icon={{ iconName: 'whatsapp', iconType: 'fab' }}
                 />
-            </FixedContainer>
+            </S.FixedLinksContainer>
 
             <NavBar id='sideNav' />
 

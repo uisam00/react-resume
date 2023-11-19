@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Section } from '../Section';
 import * as S from './about-section.styles';
 
 const About: React.FC = () => {
