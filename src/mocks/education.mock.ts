@@ -1,6 +1,6 @@
 import { EducationStatus } from '../enums/education.enum';
 
-export const EDUCATION_ITEMS = [
+export const EDUCATION_ITEMS_MOCK = [
     {
         course: 'Técnico em Informática para Internet',
         institution: 'Escola Estadual Salomé de Melo Rocha',

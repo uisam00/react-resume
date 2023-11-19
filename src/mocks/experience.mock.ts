@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { ExperienceLevel, ExperienceStatus } from '../enums';
 
-export const EXPERIENCES = [
+export const EXPERIENCES_MOCK = [
     {
         company: 'G2I',
         role: 'Desenvolvedor',

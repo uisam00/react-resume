@@ -1,4 +1,4 @@
-export const AWARDS = [
+export const AWARDS_MOCK = [
     {
         name: 'NLW#4 - RocktSeat',
     },

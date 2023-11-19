@@ -3,3 +3,9 @@ export function getArrayOfParagraphsByLineBreak(string: string) {
 
     return string.split('\n');
 }
+
+export function removePhoneMack(phone: string) {
+    if (!phone || typeof phone !== 'string') return '';
+
+    return phone.replace(/[+()\s-]/g, '');
+}
