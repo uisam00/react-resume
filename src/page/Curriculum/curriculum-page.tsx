@@ -26,6 +26,7 @@ const CurriculumPage: React.FC = React.memo(() => {
                 </S.UrlLink>
 
                 <SocialIconLink
+                    target='_blank'
                     href='https://api.whatsapp.com/send?phone=67998933115'
                     fSize='300%'
                     icon={{ iconName: 'whatsapp', iconType: 'fab' }}
