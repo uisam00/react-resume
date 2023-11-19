@@ -37,9 +37,9 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                             {experience.period.start} -{' '}
                             {experience.period.status ===
                             ExperienceStatus.Finish
-                                ? experience.period.status
-                                : experience.period.end ||
-                                  experience.period.status}
+                                ? experience.period.end ||
+                                  experience.period.status
+                                : experience.period.status}
                         </span>
                     </div>
                 </div>
